@@ -6,7 +6,9 @@ A full-stack web application that enables class representatives and or lecturers
 Technologies used:
 * HTML5
 * CSS3
-* Vanilla Javascript
-* PHP
-* MySQL
-* XAMPP
+* Object Relation Mapper (SQLAlchemy)
+* flask
+* Marshmallow
+* JSON
+
+A RESTful API concept is enabled through JSON.
