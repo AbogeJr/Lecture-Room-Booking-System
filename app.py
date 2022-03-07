@@ -27,7 +27,7 @@ class classRep(db.Model):
     unitCode = db.Column(db.String(40), unique=True)
     password = db.Column(db.String(80), unique=True)
 
-    def __int__(self, name, regNo, unitCode, password):
+    def __init__(self, name, regNo, unitCode, password):
         self.regNo = regNo
         self.name = name
         self.unitCode = unitCode
@@ -50,7 +50,7 @@ class lectureRoom(db.Model):
     room = db.Column(db.String(80), unique=False)
     unit = db.relationship('unit', backref = 'lecture_room')
 
-    def __int__(self, school, room, unit):
+    def __init__(self, school, room, unit):
         self.room = room
         self.school = school
         self.unit = unit
@@ -73,7 +73,7 @@ class Unit(db.Model):
     unitCode = db.Column(db.String(40))
     school = db.Column(db.String(80), db.ForeignKey(lectureRoom.school))
 
-    def __int__(self, school, unitTitle, unitCode):
+    def __init__(self, school, unitTitle, unitCode):
         self.unitTitle = unitTitle
         self.school = school
         self.unitCode = unitCode
